@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="clockApp/src"/>
+	<classpathentry kind="src" path="e-ticket/src"/>
+	<classpathentry kind="src" path="javis/src"/>
+	<classpathentry kind="src" path="television/src"/>
+	<classpathentry kind="output" path="clockApp/build/classes"/>
+</classpath>
