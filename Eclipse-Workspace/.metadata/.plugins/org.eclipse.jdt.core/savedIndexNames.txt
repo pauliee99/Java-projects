@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/pavlos/Documents/Eclipse-Workspace/.metadata/.plugins/org.eclipse.jdt.core
+980356416.index
+2725173651.index
+1816590136.index
+921978495.index

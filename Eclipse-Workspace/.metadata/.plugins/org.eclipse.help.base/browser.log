@@ -1,0 +1,8 @@
+
+Nov 12, 2019 17:22:57.18 NEW SESSION
+Nov 12, 2019 17:22:57.18 /usr/bin/firefox
+
+Nov 23, 2019 19:51:00.68 NEW SESSION
+Nov 23, 2019 19:51:00.69 which: no mozilla in (/home/pavlos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin)
+Nov 23, 2019 19:51:00.69 /usr/bin/firefox
+Nov 23, 2019 19:51:00.69 which: no netscape in (/home/pavlos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/cuda/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin)
