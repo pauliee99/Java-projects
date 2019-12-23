@@ -21,6 +21,10 @@ public class javisApp {
         
         if (type.equals("car")) {
         	Stream.of(availableCars).forEach(System.out::println);
+        	switch( type ) {
+        		case "car1":
+        			
+        	}
         }
         else if (type.equals("bike")) {
         	Stream.of(availableBikes).forEach(System.out::println);
