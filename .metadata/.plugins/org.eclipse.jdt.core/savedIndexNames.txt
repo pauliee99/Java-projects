@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+/home/pavlos/Documents/Java projects/.metadata/.plugins/org.eclipse.jdt.core
