@@ -16,3 +16,13 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.core.resources 2 10035 2019-12-25 13:13:56.570
 !MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2019-12-25 16:32:40.361 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=13.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.php.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.php.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2019-12-25 16:32:43.342
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
