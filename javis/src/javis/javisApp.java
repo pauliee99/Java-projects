@@ -53,7 +53,7 @@ public class javisApp {
     	
     	if (type.equals("car")) {
     		//Car aftokinito = new Car()
-    		System.out.println("hi");
+    		System.out.println(carlist);
     	}
     	else if (type.equals("bike")) {
     		
