@@ -1,12 +1,12 @@
 package javis;
 
 import java.util.*; 
-import java.util.stream.*; 
+import java.util.stream.*;
 import java.util.Scanner;
 
 public class javisApp {
     public static void main(String[] args) {
-    	
+    	/*
     	List vechiclelist = new ArrayList();
     	//vechiclelist.add(new Car("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos", "theis", "thires", "xoros"));
     	vechiclelist.add(new Car("venzini", 156, 17, 1499, 3.5, 5, 4, 5));
@@ -17,7 +17,7 @@ public class javisApp {
     	vechiclelist.add(new Dikyklo("ilektriko", 147, 15, 982, 2.4));
     	vechiclelist.add(new Dikyklo("venzini", 55, 14, 115, 1.4));
     	vechiclelist.add(new Dikyklo("venzini", 85, 16, 478, 2.9));
-    	vechiclelist.add(new Dikyklo("ilektriko", 180, 14, 950, 2.8));
+    	vechiclelist.add(new Dikyklo("ilektriko", 180, 14, 950, 2.8));*/
     	
     	Scanner scan = new Scanner(System.in);
     	System.out.println("please select one of the following:");
@@ -34,24 +34,26 @@ public class javisApp {
     
     public static void kratisi() {
     	
-    	List vechiclelist = new ArrayList();
+    	List<Car> carlist = new ArrayList<Car>();
     	//vechiclelist.add(new Car("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos", "theis", "thires", "xoros"));
-    	vechiclelist.add(new Car("venzini", 156, 17, 1499, 3.5, 5, 4, 5));
-    	vechiclelist.add(new Car("venzini", 89, 15, 1125, 2.6, 2, 2, 3));
-    	vechiclelist.add(new Car("venzini", 200, 18, 2600, 4.7, 7, 4, 8));
+    	carlist.add(new Car("venzini", 156, 17, 1499, 3.5, 5, 4, 5));
+    	carlist.add(new Car("venzini", 89, 15, 1125, 2.6, 2, 2, 3));
+    	carlist.add(new Car("venzini", 200, 18, 2600, 4.7, 7, 4, 8));
+    	List<Dikyklo> bikelist = new ArrayList<Dikyklo>();
     	//vechiclelist.add(new Dikyklo("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos");
-    	vechiclelist.add(new Dikyklo("venzini", 105, 15, 998, 3.1));
-    	vechiclelist.add(new Dikyklo("ilektriko", 147, 15, 982, 2.4));
-    	vechiclelist.add(new Dikyklo("venzini", 55, 14, 115, 1.4));
-    	vechiclelist.add(new Dikyklo("venzini", 85, 16, 478, 2.9));
-    	vechiclelist.add(new Dikyklo("ilektriko", 180, 14, 950, 2.8));
+    	bikelist.add(new Dikyklo("venzini", 105, 15, 998, 3.1));
+    	bikelist.add(new Dikyklo("ilektriko", 147, 15, 982, 2.4));
+    	bikelist.add(new Dikyklo("venzini", 55, 14, 115, 1.4));
+    	bikelist.add(new Dikyklo("venzini", 85, 16, 478, 2.9));
+    	bikelist.add(new Dikyklo("ilektriko", 180, 14, 950, 2.8));
     	
-    	Scanner scan = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
     	System.out.println("give type: (car or bike)");
     	String type = scan.nextLine();
     	
     	if (type.equals("car")) {
-    		Car aftokinito = new Car()
+    		//Car aftokinito = new Car()
+    		System.out.println("hi");
     	}
     	else if (type.equals("bike")) {
     		
