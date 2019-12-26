@@ -98,7 +98,7 @@ public class ETicket{
                     info.infoDisplay();
                 }
                 double price= ticket1.estimatePrice();
-                System.out.println(price+" €");
+                System.out.println(price+" ���");
                 do{
                     display.phase5();
                 } while(ticket1.setPayment(scan.nextLine())<0);

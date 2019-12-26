@@ -32,7 +32,7 @@ public class javisApp {
     	}
     }
     
-    public static void kratisi() {
+	public static void kratisi() {
     	
     	List<Car> carlist = new ArrayList<Car>();
     	//vechiclelist.add(new Car("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos", "theis", "thires", "xoros"));
