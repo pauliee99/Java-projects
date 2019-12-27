@@ -32,14 +32,7 @@ public class javisApp {
     	}
     }
     
-<<<<<<< HEAD
 	public static void kratisi() {
-=======
-    
-    
-    public static void kratisi() {
->>>>>>> master
-    	
     	List<Car> carlists = new ArrayList<Car>();
     	//vechiclelist.add(new Car("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos", "theis", "thires", "xoros"));
     	carlists.add(new Car("venzini", 156, 17, 1499, 3.5, 5, 4, 5));
@@ -124,12 +117,12 @@ public class javisApp {
     	else {
     		System.out.println("wrong input");
     	}
-    }
-    
-    
-    public static void showKratisi() {
     	
-    } 
+	}
+	
+	public static void showKratisi() {
+		
+	}
 
 }
 
