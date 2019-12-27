@@ -6,18 +6,7 @@ import java.util.Scanner;
 
 public class javisApp {
     public static void main(String[] args) {
-    	/*
-    	List vechiclelist = new ArrayList();
-    	//vechiclelist.add(new Car("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos", "theis", "thires", "xoros"));
-    	vechiclelist.add(new Car("venzini", 156, 17, 1499, 3.5, 5, 4, 5));
-    	vechiclelist.add(new Car("venzini", 89, 15, 1125, 2.6, 2, 2, 3));
-    	vechiclelist.add(new Car("venzini", 200, 18, 2600, 4.7, 7, 4, 8));
-    	//vechiclelist.add(new Dikyklo("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos");
-    	vechiclelist.add(new Dikyklo("venzini", 105, 15, 998, 3.1));
-    	vechiclelist.add(new Dikyklo("ilektriko", 147, 15, 982, 2.4));
-    	vechiclelist.add(new Dikyklo("venzini", 55, 14, 115, 1.4));
-    	vechiclelist.add(new Dikyklo("venzini", 85, 16, 478, 2.9));
-    	vechiclelist.add(new Dikyklo("ilektriko", 180, 14, 950, 2.8));*/
+
     	
     	Scanner scan = new Scanner(System.in);
     	System.out.println("please select one of the following:");
@@ -120,42 +109,64 @@ public class javisApp {
     	
 	}
 	
-	public static void showKratisi() {
+	
+	
+	public static void showKratisi(){
 		
 	}
 
-}
-
-/* 
-
-        
-        for(Model model : models) {
-            System.out.println(model.getName());
-        }
+	/* 
+	   
+    for(Model model : models) {
+        System.out.println(model.getName());
+    }
 
 Scanner scan = new Scanner(System.in);
 System.out.println("give type: (car or bike)");
 String type = scan.nextLine(); //reads type of vechicle
 
 if (type.equals("car")) {
-	Stream.of(availableCars).forEach(System.out::println);
-	switch( type ) {
-		case "car1":
-			
-	}
+Stream.of(availableCars).forEach(System.out::println);
+switch( type ) {
+	case "car1":
+		
+}
 }
 else if (type.equals("bike")) {
-	Stream.of(availableBikes).forEach(System.out::println);
+Stream.of(availableBikes).forEach(System.out::println);
 }
 else {
-	System.out.println("wrong input");
+System.out.println("wrong input");
 }
 
-    		/*
-    		for (Car carlist : carlists) { //this is the list with the cars
-    			System.out.println( count + ") " + carlist.getKafsimo() + " - " + carlist.getIppodinami() + " - " + carlist.getTroxoi() + " - " + carlist.getKivismos() + " - " + carlist.getKostos() + " - " + carlist.getThesis() + " - " + carlist.getThires() + " - " + carlist.getXoros());
-    		count++;
-    		}
-    		*/
+		/*
+		for (Car carlist : carlists) { //this is the list with the cars
+			System.out.println( count + ") " + carlist.getKafsimo() + " - " + carlist.getIppodinami() + " - " + carlist.getTroxoi() + " - " + carlist.getKivismos() + " - " + carlist.getKostos() + " - " + carlist.getThesis() + " - " + carlist.getThires() + " - " + carlist.getXoros());
+		count++;
+		}
+		*/
 
-*/
+
+
+/*
+List vechiclelist = new ArrayList();
+//vechiclelist.add(new Car("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos", "theis", "thires", "xoros"));
+vechiclelist.add(new Car("venzini", 156, 17, 1499, 3.5, 5, 4, 5));
+vechiclelist.add(new Car("venzini", 89, 15, 1125, 2.6, 2, 2, 3));
+vechiclelist.add(new Car("venzini", 200, 18, 2600, 4.7, 7, 4, 8));
+//vechiclelist.add(new Dikyklo("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos");
+vechiclelist.add(new Dikyklo("venzini", 105, 15, 998, 3.1));
+vechiclelist.add(new Dikyklo("ilektriko", 147, 15, 982, 2.4));
+vechiclelist.add(new Dikyklo("venzini", 55, 14, 115, 1.4));
+vechiclelist.add(new Dikyklo("venzini", 85, 16, 478, 2.9));
+vechiclelist.add(new Dikyklo("ilektriko", 180, 14, 950, 2.8));*/
+}
+
+
+
+
+
+
+
+
+
