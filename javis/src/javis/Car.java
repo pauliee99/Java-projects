@@ -49,7 +49,7 @@ public class Car {
     	return thires;
     }
     
-    public int getoros() {
+    public int getXoros() {
     	return xoros;
     }
         
