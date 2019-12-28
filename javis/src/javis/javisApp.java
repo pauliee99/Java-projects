@@ -84,10 +84,10 @@ public class javisApp {
     		for (Places placelist : placelists) {
     			System.out.println(placelist.getAr() + " - " + placelist.getTypos() + " - " + placelist.getDiefthinsi());
     		}
-    		
+    		/*
     		freeVech = scan.nextInt();
     		date = scan.nextInt();
-    		time = scan.nextLine();
+    		time = scan.nextLine();*/
     	}
     	
     	else if (type.equals("bike")) { //if user wants to rent a bike
