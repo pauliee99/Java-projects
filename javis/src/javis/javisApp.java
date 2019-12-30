@@ -2,7 +2,6 @@ package javis;
 
 import java.util.*; 
 import java.util.stream.*;
-import java.util.Scanner;
 
 public class javisApp {
     public static void main(String[] args) {
@@ -44,30 +43,39 @@ public class javisApp {
 		Scanner scan = new Scanner(System.in);
     	System.out.println("give type: (car or bike)");
     	String type = scan.nextLine();
-    	int freeVech,date;
-    	String time;
     	
     	if (type.equals("car")) { //if user wants to rent a car
     		System.out.println("kafsimo - ippodinami - megethos troxon - kivismos - kostos ana ora - plithos theseon - plithos thiron - megethos xorou aposkevon");
     		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     		int count = 1;
-
-    		for(int i = 0; i < carlists.size(); i++) {
-                System.out.println(i+1 + ") " + carlists.get(i).getKafsimo() + " - " + carlists.get(i).getIppodinami() + " - " + carlists.get(i).getTroxoi() + " - " + carlists.get(i).getKivismos() + " - " + carlists.get(i).getKostos() + " - " + carlists.get(i).getThesis() + " - " + carlists.get(i).getThires() + " - " + carlists.get(i).getXoros());
-            }
-    		System.out.println("please choose a car");
-    		int choiceCar = scan.nextInt();
-			switch (choiceCar) {
-    			case 1:
-    				carlists.get(0);
-    				break;
-    			case 2:
-    				carlists.get(1);
-    				break;
-    			case 3:
-    				carlists.get(2);
-    				break;
-    		}
+    	for(int i = 0; i < carlists.size(); i++) {
+            System.out.println(i+1 + ") " + carlists.get(i).getKafsimo() + " - " + carlists.get(i).getIppodinami() + " - " + carlists.get(i).getTroxoi() + " - " + carlists.get(i).getKivismos() + " - " + carlists.get(i).getKostos() + " - " + carlists.get(i).getThesis() + " - " + carlists.get(i).getThires() + " - " + carlists.get(i).getXoros());
+        }
+		System.out.println("please choose a car");
+		int choiceCar = scan.nextInt();
+		
+		switch (choiceCar) {
+			case 1:
+				System.out.println("please give pickup date (YYYYMMDD)");
+				int pickupdate = scan.nextInt();
+				System.out.println("ID - typos - diefthinsi"); // those are the available places
+	    		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	    		for (Places placelist : placelists) {
+	    			System.out.println(placelist.getAr() + " - " + placelist.getTypos() + " - " + placelist.getDiefthinsi());
+	    		}
+	    		System.out.println("please choose a place of delivery");
+				int pickupplace = scan.nextInt();
+				System.out.println("please give pickup date (YYYYMMDD)");
+				int dropdate = scan.nextInt();
+				carlists.get(0);
+			case 2:
+				carlists.get(1);
+			case 3:
+				carlists.get(2);
+			default:
+				System.out.println("wrong car");
+				break;
+		}
     		
     		System.out.println("\n");
     		
@@ -76,14 +84,11 @@ public class javisApp {
     		for (Places placelist : placelists) {
     			System.out.println(placelist.getAr() + " - " + placelist.getTypos() + " - " + placelist.getDiefthinsi());
     		}
-    		
+    		/*
     		freeVech = scan.nextInt();
     		date = scan.nextInt();
-    		time = scan.nextLine();
+    		time = scan.nextLine();*/
     	}
-    	
-    	
-    	
     	
     	else if (type.equals("bike")) { //if user wants to rent a bike
     		System.out.println("kafsimo - ippodinami - megethos troxon - kivismos - kostos ana ora");
@@ -109,57 +114,13 @@ public class javisApp {
     	
 	}
 	
-	
-	
 	public static void showKratisi(){
 		
 	}
-
-	/* 
-	   
-    for(Model model : models) {
-        System.out.println(model.getName());
-    }
-
-Scanner scan = new Scanner(System.in);
-System.out.println("give type: (car or bike)");
-String type = scan.nextLine(); //reads type of vechicle
-
-if (type.equals("car")) {
-Stream.of(availableCars).forEach(System.out::println);
-switch( type ) {
-	case "car1":
-		
-}
-}
-else if (type.equals("bike")) {
-Stream.of(availableBikes).forEach(System.out::println);
-}
-else {
-System.out.println("wrong input");
-}
-
-		/*
-		for (Car carlist : carlists) { //this is the list with the cars
-			System.out.println( count + ") " + carlist.getKafsimo() + " - " + carlist.getIppodinami() + " - " + carlist.getTroxoi() + " - " + carlist.getKivismos() + " - " + carlist.getKostos() + " - " + carlist.getThesis() + " - " + carlist.getThires() + " - " + carlist.getXoros());
-		count++;
-		}
-		*/
+	
+	
 
 
-
-/*
-List vechiclelist = new ArrayList();
-//vechiclelist.add(new Car("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos", "theis", "thires", "xoros"));
-vechiclelist.add(new Car("venzini", 156, 17, 1499, 3.5, 5, 4, 5));
-vechiclelist.add(new Car("venzini", 89, 15, 1125, 2.6, 2, 2, 3));
-vechiclelist.add(new Car("venzini", 200, 18, 2600, 4.7, 7, 4, 8));
-//vechiclelist.add(new Dikyklo("kafsimo", "ippodinami", "troxoi", "kivismos", "kostos");
-vechiclelist.add(new Dikyklo("venzini", 105, 15, 998, 3.1));
-vechiclelist.add(new Dikyklo("ilektriko", 147, 15, 982, 2.4));
-vechiclelist.add(new Dikyklo("venzini", 55, 14, 115, 1.4));
-vechiclelist.add(new Dikyklo("venzini", 85, 16, 478, 2.9));
-vechiclelist.add(new Dikyklo("ilektriko", 180, 14, 950, 2.8));*/
 }
 
 
