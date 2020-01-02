@@ -29,7 +29,7 @@ public class javisApp {
 		Places place4 = new Places(4, "simio", "papagou 3, TK33421");
 		
 		Random rand=new Random(); //instance of random class
-		
+		String choiceCar = "";
 		Scanner scan = new Scanner(System.in);
 		Scanner scan2 = new Scanner(System.in);
 		System.out.println("please select one of the following:");
@@ -55,7 +55,7 @@ public class javisApp {
 						+ car3.getThesis() + " - " + car3.getThires() + " - " + car3.getXoros());
 
 				System.out.println("please choose a car");
-				String choiceCar = scan2.nextLine();
+				choiceCar = scan2.nextLine();
 				switch (choiceCar) {
 				case "car1":
 					choiceCar = car1.getKafsimo() + " - " + car1.getIppodinami() + " - "
@@ -75,79 +75,105 @@ public class javisApp {
 				default:
 					System.out.println("wrong car");
 					break;
-				}
-				
-				System.out.println("please enter the date you would like to pickup the car:(YYYYMMDD)");
-				int takeDate = scan.nextInt();
-				
-				System.out.println("ID - typos - diefthinsi");
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-				System.out.println("place1: " + place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi());
-				System.out.println("place2: " + place2.getAr() + " - " + place2.getTypos() + " - " + place2.getDiefthinsi());
-				System.out.println("place3: " + place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi());
-				System.out.println("place4: " + place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi());
-				System.out.println("please choose a place to pick up the car:");
-				String takePlace = scan2.nextLine();
-				switch (takePlace) {
-				case "place1":
-					takePlace = place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi();
-					break;
-				case "place2":
-					takePlace = place2.getAr() + " - " + place2.getTypos() + " - " + place2.getDiefthinsi();
-					break;
-				case "place3":
-					takePlace = place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi();
-					break;
-				case "place4":
-					takePlace = place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi();
-					break;
-				default:
-					System.out.println("wrong place");
-					break;
-				}
-				
-				System.out.println("please enter the date you would like to give the car back:(YYYYMMDD)");
-				int giveDate = scan.nextInt();
-				
-				System.out.println("ID - typos - diefthinsi");
-				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-				System.out.println("place1: " + place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi());
-				System.out.println("place2: " + place2.getAr() + " - " + place2.getTypos() + " - " + place2.getDiefthinsi());
-				System.out.println("place3: " + place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi());
-				System.out.println("place4: " + place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi());
-				System.out.println("please choose a place to give the car back:");
-				String givePlace = scan2.nextLine();
-				switch (givePlace) {
-				case "place1":
-					givePlace = place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi();
-					break;
-				case "place2":
-					givePlace = place2.getAr() + " - " + place2.getTypos() + " - " + place2.getDiefthinsi();
-					break;
-				case "place3":
-					givePlace = place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi();
-					break;
-				case "place4":
-					givePlace = place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi();
-					break;
-				default:
-					System.out.println("wrong place");
-					break;
-				}
-				
-				System.out.println("to complete the booking we need some private info...");
-				System.out.println("ID:");
-				int id = scan.nextInt();
-				System.out.println("Licence:");
-				int licence = scan.nextInt();
-				
-				// if gia metrita i karta
-				
-				int kodikos = rand.nextInt(9999);
-				
-				
+				}	
+			}else if (type.equals("bike")) {
 				
 			}
+				
+			System.out.println("please enter the date you would like to pickup the car:(YYYYMMDD)");
+			int takeDate = scan.nextInt();
+			
+			System.out.println("ID - typos - diefthinsi");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("place1: " + place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi());
+			System.out.println("place2: " + place2.getAr() + " - " + place2.getTypos() + " - " + place2.getDiefthinsi());
+			System.out.println("place3: " + place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi());
+			System.out.println("place4: " + place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi());
+			System.out.println("please choose a place to pick up the car:");
+			String takePlace = scan2.nextLine();
+			switch (takePlace) {
+			case "place1":
+				takePlace = place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi();
+				break;
+			case "place2":
+				takePlace = place2.getAr() + " - " + place2.getTypos() + " - " + place2.getDiefthinsi();
+				break;
+			case "place3":
+				takePlace = place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi();
+				break;
+			case "place4":
+				takePlace = place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi();
+				break;
+			default:
+				System.out.println("wrong place");
+				break;
+			}
+			
+			System.out.println("please enter the date you would like to give the car back:(YYYYMMDD)");
+			int giveDate = scan.nextInt();
+			
+			System.out.println("ID - typos - diefthinsi");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("place1: " + place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi());
+			System.out.println("place2: " + place2.getAr() + " - " + place2.getTypos() + " - " + place2.getDiefthinsi());
+			System.out.println("place3: " + place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi());
+			System.out.println("place4: " + place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi());
+			System.out.println("please choose a place to give the car back:");
+			String givePlace = scan2.nextLine();
+			switch (givePlace) {
+			case "place1":
+				givePlace = place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi();
+				break;
+			case "place2":
+				givePlace = place2.getAr() + " - " + place2.getTypos() + " - " + place2.getDiefthinsi();
+				break;
+			case "place3":
+				givePlace = place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi();
+				break;
+			case "place4":
+				givePlace = place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi();
+				break;
+			default:
+				System.out.println("wrong place");
+				break;
+			}
+			
+			System.out.println("to complete the booking we need some private info...");
+			System.out.println("ID:");
+			int id = scan.nextInt();
+			System.out.println("Licence:");
+			int licence = scan.nextInt();
+			System.out.println("Age:");
+			int age = scan.nextInt();
+			String pay;
+			int card = 0;
+			while (true) {
+				System.out.println("pos thelete na ksoflisete tin krateisi? (card/cash)");
+					pay = scan2.nextLine();
+				if (pay.equals("card")){
+					System.out.println("give card no.");
+					card = scan.nextInt();
+					break;
+				}
+				else if(pay.equals("cash")) {
+					break;
+				}
+				else 
+					System.out.println("wrong payment method choose again...");
+			}
+			
+			
+			int kodikos = rand.nextInt(9999);
+			int cost = (giveDate - takeDate)*24;
+			
+			System.out.println("kodikos kratisis: " + kodikos);
+			System.out.println("sinoliki timi: " + cost + "with " + pay);
+			System.out.println(choiceCar);
+			if (pay.equals("card")) 
+				System.out.println("ID: " + id + "\nLicence: " + licence + "Age: " + age);
+			else
+				System.out.println("ID: " + id + "\nLicence: " + licence + "Age: " + age + "card number: " + card);
+			
 			break;
 		}
 	}
