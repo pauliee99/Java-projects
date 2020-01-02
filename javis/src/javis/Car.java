@@ -25,32 +25,64 @@ public class Car {
         xoros = space;
     }
     
+    public void setKafsimo(String gas) {
+    	this.kafsimo = gas;
+    }
+    
     public String getKafsimo() {
     	return kafsimo;
+    }
+    
+    public void setIppodinami(int hp) {
+    	this.ippodinami = hp;
     }
     
     public int getIppodinami() {
     	return ippodinami;
     }
     
+    public void setTroxoi(int wheels) {
+    	this.troxoi = wheels;
+    }
+    
     public int getTroxoi() {
     	return troxoi;
+    }
+    
+    public void setKivismos(int blocks) {
+    	this.kivismos = blocks;
     }
     
     public int getKivismos() {
     	return kivismos;
     }
     
+    public void setKostos(double cost) {
+    	this.kostos = cost;
+    }
+    
     public double getKostos() {
     	return kostos;
+    }
+    
+    public void setThesis(int seats) {
+    	this.thesis = seats;
     }
     
     public int getThesis() {
     	return thesis;
     }
     
+    public void setThires(int doors) {
+    	this.thires = doors;
+    }
+    
     public int getThires() {
     	return thires;
+    }
+    
+    public void setXoros(int space) {
+    	this.xoros = space;
     }
     
     public int getXoros() {

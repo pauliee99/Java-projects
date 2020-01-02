@@ -1,0 +1,88 @@
+    	List<vechicle> lists = new ArrayList<vechicle>();
+    	lists.add(new vechicle("venzini", 156, 17, 1499, 3.5, 5, 4, 5));
+    	lists.add(new vechicle("venzini", 89, 15, 1125, 2.6, 2, 2, 3));
+    	lists.add(new vechicle("venzini", 200, 18, 2600, 4.7, 7, 4, 8));
+    	lists.add(new vechicle("venzini", 105, 15, 998, 3.1));
+    	lists.add(new vechicle("ilektriko", 147, 15, 982, 2.4));
+    	lists.add(new vechicle("venzini", 55, 14, 115, 1.4));
+    	lists.add(new vechicle("venzini", 85, 16, 478, 2.9));
+    	lists.add(new vechicle("ilektriko", 180, 14, 950, 2.8));
+    	List<Places> placelists = new ArrayList<Places>();
+    	//public Places(int id, String type, String address);
+    	placelists.add(new Places(1, "katastima", "antheon 32, TK23456"));
+    	placelists.add(new Places(2, "katastima", "socratous 58, TK13426"));
+    	placelists.add(new Places(3, "simio", "papadiamantopoullou 20, TK23872"));
+    	placelists.add(new Places(4, "simio", "papagou 3, TK33421"));
+    	
+		Scanner scan = new Scanner(System.in);
+    	System.out.println("give type: (car or bike)");
+    	String type = scan.nextLine();
+    	
+    	if (type.equals("car")) { //if user wants to rent a car
+    		System.out.println("kafsimo - ippodinami - megethos troxon - kivismos - kostos ana ora - plithos theseon - plithos thiron - megethos xorou aposkevon");
+    		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    		int count = 1;
+    	for(int i = 0; i < lists.size(); i++) {
+            System.out.println(i+1 + ") " + lists.get(i).getKafsimo() + " - " + lists.get(i).getIppodinami() + " - " + lists.get(i).getTroxoi() + " - " + lists.get(i).getKivismos() + " - " + lists.get(i).getKostos() + " - " + lists.get(i).getThesis() + " - " + lists.get(i).getThires() + " - " + lists.get(i).getXoros());
+        }
+		System.out.println("please choose a car");
+		int choiceCar = scan.nextInt();
+		
+		switch (choiceCar) {
+			case 1:
+				System.out.println("please give pickup date (YYYYMMDD)");
+				int pickupdate = scan.nextInt();
+				System.out.println("ID - typos - diefthinsi"); // those are the available places
+	    		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+	    		for (Places placelist : placelists) {
+	    			System.out.println(placelist.getAr() + " - " + placelist.getTypos() + " - " + placelist.getDiefthinsi());
+	    		}
+	    		System.out.println("please choose a place of delivery");
+				int pickupplace = scan.nextInt();
+				System.out.println("please give pickup date (YYYYMMDD)");
+				int dropdate = scan.nextInt();
+				lists.get(0);
+			case 2:
+				lists.get(1);
+			case 3:
+				lists.get(2);
+			default:
+				System.out.println("wrong car");
+				break;
+		}
+    		
+    		System.out.println("\n");
+    		
+    		System.out.println("ID - typos - diefthinsi"); // those are the available places
+    		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    		for (Places placelist : placelists) {
+    			System.out.println(placelist.getAr() + " - " + placelist.getTypos() + " - " + placelist.getDiefthinsi());
+    		}
+    		/*
+    		freeVech = scan.nextInt();
+    		date = scan.nextInt();
+    		time = scan.nextLine();*/
+    	}
+    	
+    	else if (type.equals("bike")) { //if user wants to rent a bike
+    		System.out.println("kafsimo - ippodinami - megethos troxon - kivismos - kostos ana ora");
+    		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    		int count = 1;
+    		for (vechicle bikelist : lists) { //this is the list with the bikes
+    			System.out.println( count + ") " + bikelist.getKafsimo() + " - " + bikelist.getIppodinami() + " - " + bikelist.getTroxoi() + " - " + bikelist.getKivismos() + " - " + bikelist.getKostos());
+    			count++;
+    		}
+    		
+    		System.out.println("\n");
+    		
+    		System.out.println("ID - typos - diefthinsi"); // those are the available places
+    		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+    		for (Places placelist : placelists) {
+    			System.out.println(placelist.getAr() + " - " + placelist.getTypos() + " - " + placelist.getDiefthinsi());
+    		}
+    		
+    	}
+    	else {
+    		System.out.println("wrong input");
+    	}
+    	
