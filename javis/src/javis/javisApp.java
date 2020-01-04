@@ -3,15 +3,13 @@ package javis;
 import java.util.*;
 import java.util.stream.*;
 import java.util.Random;
+import java.text.SimpleDateFormat;  
+import java.util.Date;
+import java.sql.Time;
+import java.lang.Object;
+
 
 public class javisApp {
-
-	public static int check(int input) {
-		if ("1".equals(input)) {
-
-		}
-		return -1;
-	}
 
 	public static void main(String[] args) {
 
@@ -29,17 +27,22 @@ public class javisApp {
 		Places place4 = new Places(4, "simio", "papagou 3, TK33421");
 		
 		Random rand=new Random(); //instance of random class
-		String choiceCar = "";
-		Scanner scan = new Scanner(System.in);
-		Scanner scan2 = new Scanner(System.in);
+		String choiceCar = "";  //vehicle choice
+		int kodikos = 0;  // kodikos kratisis
+		int cost = 0;  // kostos kratisis
+		int takeDate = 0;  //the date go pick up the car
+		int giveDate = 0;  //the day to leave the car
+		int id = 0; // the ID
+		Scanner integer= new Scanner(System.in);
+		Scanner string = new Scanner(System.in);
 		System.out.println("please select one of the following:");
 		System.out.println("1. kratisi oximatos\n2. allagi kratisis\n3. emfanisi kratisis");
 
-		int choice = scan.nextInt();
+		int choice = integer.nextInt();
 		switch (choice) {
 		case 1: //kratisi oximatos
 			System.out.println("give type: (car or bike)");
-			String type = scan2.nextLine();
+			String type = string.nextLine();
 			if (type.equals("car")) { // if user wants to rent a car
 				System.out.println(
 						"kafsimo - ippodinami - megethos troxon - kivismos - kostos ana ora - plithos theseon - plithos thiron - megethos xorou aposkevon");
@@ -55,7 +58,7 @@ public class javisApp {
 						+ car3.getThesis() + " - " + car3.getThires() + " - " + car3.getXoros());
 
 				System.out.println("please choose a car");
-				choiceCar = scan2.nextLine();
+				choiceCar = string.nextLine();
 				switch (choiceCar) {
 				case "car1":
 					choiceCar = car1.getKafsimo() + " - " + car1.getIppodinami() + " - "
@@ -77,11 +80,51 @@ public class javisApp {
 					break;
 				}	
 			}else if (type.equals("bike")) {
+				System.out.println(
+						"kafsimo - ippodinami - megethos troxon - kivismos - kostos ana ora");
+				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+				System.out.println("bike1: " + bike1.getKafsimo() + " - " + bike1.getIppodinami() + " - "
+						+ bike1.getTroxoi() + " - " + bike1.getKivismos() + " - " + bike1.getKostos());
+				System.out.println("bike2: " + bike2.getKafsimo() + " - " + bike2.getIppodinami() + " - "
+						+ bike2.getTroxoi() + " - " + bike2.getKivismos() + " - " + bike2.getKostos());
+				System.out.println("bike3: " + bike3.getKafsimo() + " - " + bike3.getIppodinami() + " - "
+						+ bike3.getTroxoi() + " - " + bike3.getKivismos() + " - " + bike3.getKostos());
+				System.out.println("bike4: " + bike4.getKafsimo() + " - " + bike4.getIppodinami() + " - "
+						+ bike4.getTroxoi() + " - " + bike4.getKivismos() + " - " + bike4.getKostos());
+				System.out.println("bike5: " + bike5.getKafsimo() + " - " + bike5.getIppodinami() + " - "
+						+ bike5.getTroxoi() + " - " + bike5.getKivismos() + " - " + bike5.getKostos());
 				
+				System.out.println("please choose a bike");
+				choiceCar = string.nextLine();
+				switch(choiceCar) {
+				case "bike1":
+					choiceCar = bike1.getKafsimo() + " - " + bike1.getIppodinami() + " - "
+							+ bike1.getTroxoi() + " - " + bike1.getKivismos() + " - " + car1.getKostos();
+					break;
+				case "bike2":
+					choiceCar = bike2.getKafsimo() + " - " + bike2.getIppodinami() + " - "
+							+ bike2.getTroxoi() + " - " + bike2.getKivismos() + " - " + bike2.getKostos();
+					break;
+				case "bike3":
+					choiceCar = bike3.getKafsimo() + " - " + bike3.getIppodinami() + " - "
+							+ bike3.getTroxoi() + " - " + bike3.getKivismos() + " - " + bike3.getKostos();
+					break;
+				case "bike4":
+					choiceCar = bike4.getKafsimo() + " - " + bike4.getIppodinami() + " - "
+							+ bike4.getTroxoi() + " - " + bike4.getKivismos() + " - " + bike4.getKostos();
+					break;
+				case "bike5":
+					choiceCar = bike5.getKafsimo() + " - " + bike5.getIppodinami() + " - "
+							+ bike5.getTroxoi() + " - " + bike5.getKivismos() + " - " + bike5.getKostos();
+					break;
+				default:
+					System.out.println("wrong car");
+					break;
+				}
 			}
 				
 			System.out.println("please enter the date you would like to pickup the car:(YYYYMMDD)");
-			int takeDate = scan.nextInt();
+			takeDate = integer.nextInt();
 			
 			System.out.println("ID - typos - diefthinsi");
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -90,7 +133,7 @@ public class javisApp {
 			System.out.println("place3: " + place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi());
 			System.out.println("place4: " + place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi());
 			System.out.println("please choose a place to pick up the car:");
-			String takePlace = scan2.nextLine();
+			String takePlace = string.nextLine();
 			switch (takePlace) {
 			case "place1":
 				takePlace = place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi();
@@ -110,7 +153,7 @@ public class javisApp {
 			}
 			
 			System.out.println("please enter the date you would like to give the car back:(YYYYMMDD)");
-			int giveDate = scan.nextInt();
+			giveDate = integer.nextInt();
 			
 			System.out.println("ID - typos - diefthinsi");
 			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -119,7 +162,7 @@ public class javisApp {
 			System.out.println("place3: " + place3.getAr() + " - " + place3.getTypos() + " - " + place3.getDiefthinsi());
 			System.out.println("place4: " + place4.getAr() + " - " + place4.getTypos() + " - " + place4.getDiefthinsi());
 			System.out.println("please choose a place to give the car back:");
-			String givePlace = scan2.nextLine();
+			String givePlace = string.nextLine();
 			switch (givePlace) {
 			case "place1":
 				givePlace = place1.getAr() + " - " + place1.getTypos() + " - " + place1.getDiefthinsi();
@@ -140,19 +183,19 @@ public class javisApp {
 			
 			System.out.println("to complete the booking we need some private info...");
 			System.out.println("ID:");
-			int id = scan.nextInt();
+			id = integer.nextInt();
 			System.out.println("Licence:");
-			int licence = scan.nextInt();
+			int licence = integer.nextInt();
 			System.out.println("Age:");
-			int age = scan.nextInt();
+			int age = integer.nextInt();
 			String pay;
 			int card = 0;
 			while (true) {
 				System.out.println("pos thelete na ksoflisete tin krateisi? (card/cash)");
-					pay = scan2.nextLine();
+					pay = string.nextLine();
 				if (pay.equals("card")){
 					System.out.println("give card no.");
-					card = scan.nextInt();
+					card = integer.nextInt();
 					break;
 				}
 				else if(pay.equals("cash")) {
@@ -163,63 +206,37 @@ public class javisApp {
 			}
 			
 			
-			int kodikos = rand.nextInt(9999);
-			int cost = (giveDate - takeDate)*24;
+			kodikos = rand.nextInt(9999);  //to generate booking code
+			cost = (giveDate - takeDate)*24;  // to calculate the cost of the booking
 			
+			System.out.println("\n ---stixia kratisis-----");
 			System.out.println("kodikos kratisis: " + kodikos);
-			System.out.println("sinoliki timi: " + cost + "with " + pay);
+			System.out.println("sinoliki timi: €" + cost + " with " + pay);
 			System.out.println(choiceCar);
 			if (pay.equals("card")) 
-				System.out.println("ID: " + id + "\nLicence: " + licence + "Age: " + age);
+				System.out.println("ID: " + id + "\nLicence: " + licence + "Age: " + age + "\ncard number: " + card);
 			else
-				System.out.println("ID: " + id + "\nLicence: " + licence + "Age: " + age + "card number: " + card);
+				System.out.println("ID: " + id + "\nLicence: " + licence + "\nAge: " + age);
 			
 			break;
+			
+		case 2: //allagi kratisis
+			System.out.println("dose kodiko kratisis:");
+			int kodikostmp = integer.nextInt();
+			//SimpleDateFormat formatter = new SimpleDateFormat("yyyymmdd");  
+		    //Date date = new Date();
+		    //System.out.println(formatter.format(date));
+		    //int date = getDay();
+			Date today = Calendar.getInstance().getTime();
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
+			String folderName = formatter.format(today);
+			int date = Integer.parseInt(folderName);	
+			int tmp = takeDate-date;
+		    if (tmp < 24) {
+		    	
+		    }
 		}
+			
 	}
-
-	/*
-	 * public static void kratisi() {
-	 * 
-	 * 
-	 * System.out.println("\n");
-	 * 
-	 * System.out.println("ID - typos - diefthinsi"); // those are the available
-	 * places System.out.println(
-	 * "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); for
-	 * (Places placelist : placelists) { System.out.println(placelist.getAr() +
-	 * " - " + placelist.getTypos() + " - " + placelist.getDiefthinsi()); }
-	 * 
-	 * freeVech = scan.nextInt(); date = scan.nextInt(); time = scan.nextLine(); }
-	 * 
-	 * else if (type.equals("bike")) { //if user wants to rent a bike System.out.
-	 * println("kafsimo - ippodinami - megethos troxon - kivismos - kostos ana ora"
-	 * ); System.out.println(
-	 * "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	 * System.out.println("bike1: " + bike1.getKafsimo() + " - " +
-	 * bike1.getIppodinami() + " - " + bike1.getTroxoi() + " - " +
-	 * bike1.getKivismos() + " - " + bike1.getKostos());
-	 * 
-	 * int count = 1; for (vechicle bikelist : lists) { //this is the list with the
-	 * bikes System.out.println( count + ") " + bikelist.getKafsimo() + " - " +
-	 * bikelist.getIppodinami() + " - " + bikelist.getTroxoi() + " - " +
-	 * bikelist.getKivismos() + " - " + bikelist.getKostos()); count++; }
-	 * 
-	 * System.out.println("\n");
-	 * 
-	 * System.out.println("ID - typos - diefthinsi"); // those are the available
-	 * places System.out.println(
-	 * "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"); for
-	 * (Places placelist : placelists) { System.out.println(placelist.getAr() +
-	 * " - " + placelist.getTypos() + " - " + placelist.getDiefthinsi()); }
-	 * 
-	 * } else { System.out.println("wrong input"); }
-	 * 
-	 * }
-	 * 
-	 * public static void showKratisi(){
-	 * 
-	 * }
-	 */
 
 }
